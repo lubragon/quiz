@@ -1,0 +1,27 @@
+.respostaButton
+{
+    color:#4CB0AB;
+    text-align:center;
+    vertical-align:text-top;
+    font-size:12px;
+    font-family:Inter;
+    line-height:auto;
+    border-style:hidden;
+    outline:black;
+    padding: 5px;
+    width:400px;
+
+}
+
+.containerRespostas
+{
+    margin: 200px auto;
+    width:40000px;
+    height:400px;
+    background-color:#43d10b;
+    display:grid;
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
