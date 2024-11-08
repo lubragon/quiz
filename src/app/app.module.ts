@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
 import { QuizComponent } from './components/quiz/quiz.component'
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
 
 
 
@@ -13,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     MainComponent,
-    QuizComponent
+    QuizComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
