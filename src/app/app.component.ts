@@ -9,12 +9,4 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'quiz';
-  constructor(private router: Router) {}
-
-  navigateToMain() {
-    this.router.navigate(['/main']); 
-  }
-
-
-
 }
