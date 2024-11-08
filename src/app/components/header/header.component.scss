@@ -1,0 +1,34 @@
+.header 
+{
+    background-color:blue;
+    padding: 5px 10px; /* Some padding */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    height: 15vh;
+    justify-content: space-between; 
+}
+
+.header_Itens
+{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    padding: 20vw; 
+    
+}
+.header_Title
+{
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    flex: 1;
+
+}
+.header_Profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
