@@ -12,6 +12,7 @@ interface Pergunta {
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
   styleUrl: './quiz.component.scss'
+  
 })
 export class QuizComponent implements OnInit{
 

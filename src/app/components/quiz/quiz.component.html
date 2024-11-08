@@ -1,20 +1,24 @@
-<div *ngIf="perguntaAtual">
-    <h2>{{ perguntaAtual.pergunta }}</h2>
+<div id="perguntaBackground">
+
+  <div *ngIf="perguntaAtual">
+
+    <h2 id="perguntaAtual">{{ perguntaAtual.pergunta }}</h2>
 
     <div *ngFor="let resposta of perguntaAtual.respostas" class="containarRespostas">
       <div (click)="responder(perguntaAtual, resposta)" class="respostaButton">
         {{ resposta.texto }}
       </div>
     </div>
-  
-    <div *ngIf="respostaCorreta !== undefined">
+    
+    <div id="resultadoResposta" *ngIf="respostaCorreta !== undefined">
       <p *ngIf="respostaCorreta">Resposta Correta!</p>
       <p *ngIf="!respostaCorreta">Resposta Incorreta!</p>
     </div>
-</div>
-<!--   
+  </div>
+  <!--   
   <div *ngIf="!perguntaAtual">
     <h2>Fim do Quiz!</h2>
     <p>Pontuação: {{ indiceAtual }}/{{ perguntas.length }}</p>
-  </div> -->
-  
+  </div> 
+  -->
+</div>
