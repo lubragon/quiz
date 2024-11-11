@@ -20,3 +20,16 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+.mainBody{
+    margin-top:1%;
+    padding: 1%;
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    margin-right: 20%;
+    outline: auto;
+    outline-color: rgb(8, 3, 6);
+    display: inline-grid;
+    grid-template-columns: auto;
+}
