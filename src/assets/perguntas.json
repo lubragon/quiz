@@ -1,0 +1,13 @@
+[
+    {
+      "id": 1,
+      "pergunta": "Qual a capital da França?",
+      "respostas": [
+        { "texto": "Paris", "isCorrect": true },
+        { "texto": "Londres", "isCorrect": false },
+        { "texto": "Roma", "isCorrect": false },
+        { "texto": "Berlim", "isCorrect": false }
+      ]
+    }
+     
+]
