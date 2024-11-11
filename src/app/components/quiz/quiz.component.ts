@@ -1,4 +1,4 @@
-import { Component, Injectable, OnInit } from '@angular/core';
+import { Component, OnInit, signal, Signal } from '@angular/core';
 import { QuizGameService } from '../../services/quizGame/quizGame.service';
 import { Pergunta } from '../../types/interfaces.types';
 
