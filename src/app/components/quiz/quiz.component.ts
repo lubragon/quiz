@@ -1,12 +1,6 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { QuizGameService } from '../../services/quizGame/quizGame.service';
-
-
-interface Pergunta {
-  id: number;
-  pergunta: string;
-  respostas: { texto: string; correta: boolean }[];
-}
+import { Pergunta } from '../../types/interfaces.types';
 
 @Component({
   selector: 'app-quiz',
@@ -20,13 +14,16 @@ export class QuizComponent implements OnInit{
   perguntaAtual: Pergunta | undefined;
   indiceAtual = 0
   respostaCorreta: boolean | undefined;
+  feedbackMensagem: string | undefined;
+  pontuacao = 0
+  isClicked = false
 
   constructor(private quizService: QuizGameService) {}
 
 
   ngOnInit(): void {
     this.quizService.getPerguntas().subscribe((data) => {
-      console.log(data); 
+      //console.log(data); 
       this.perguntas = data;
       this.perguntaAtual = this.perguntas[this.indiceAtual];
     }, error => {
@@ -34,8 +31,28 @@ export class QuizComponent implements OnInit{
     });
   }
 
-  responder(pergunta: Pergunta, resposta: {texto: string, correta: boolean}){
-    this.respostaCorreta = resposta.correta;
+  responder(pergunta: Pergunta, resposta: {texto: string, isCorrect: boolean}){
+
+    this.respostaCorreta = resposta.isCorrect;
+    this.feedbackMensagem = this.respostaCorreta ? 'Resposta Correta!' : 'Resposta Incorreta!';
+
+    if (this.respostaCorreta){
+      console.log("Acertou!")
+      this.pontuacao++
+      this.isClicked = true
+    }else{
+      console.log("Errou")
+      this.isClicked = true
+    }
+
+
+
+    setTimeout(() => 
+      {
+        this.feedbackMensagem = undefined;
+        this.proximaPergunta();
+      }, 1500)
+
   }
 
   proximaPergunta(): void 
@@ -45,9 +62,10 @@ export class QuizComponent implements OnInit{
       if (this.indiceAtual < this.perguntas.length) {
         this.perguntaAtual = this.perguntas[this.indiceAtual];
         this.respostaCorreta = undefined;
+        this.isClicked = false;
       } else {
         this.perguntaAtual = undefined;
       }
-    }, 1000);
+    }, 0);
   }
 }
