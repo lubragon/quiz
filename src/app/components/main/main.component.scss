@@ -1,12 +1,22 @@
+
 h1 {
     text-align: center;
     color: black;
     font-weight: bold;
+    font-size: 3rem;
 }
 
-button {
-    align-self: center;
-    margin-left: 47vw;
-    margin-right: 50vw;
-    margin-top: 45px;
+.button-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.buttonJogar {
+    text-align: center;
+    justify-content: center;
+    background-color: azure;
+    height: 2.5rem;
+    width:45%;
 }
