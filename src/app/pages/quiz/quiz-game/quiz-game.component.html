@@ -1,21 +1,24 @@
 <div id="perguntaBackground">
 
-  <a routerLink="/base/usuario/lista">VoltR</a>
     <div *ngIf="perguntaAtual">
       
+      <!-- // Pergunta -->
       <h2 id="perguntaAtual">{{perguntaAtual.pergunta || ""}}</h2>
 
+
+      <!-- Respostas -->
       <div *ngFor="let i of perguntaAtual?.respostas" class="containerRespostas">
         <div (click)="responder(i)" class="respostaButton" [class.disabled]="isClicked">{{i.texto}}</div>
       </div>
 
+      <!-- Feedback -->
       <div id="resultadoResposta" *ngIf="feedbackMensagem">
         <p >{{feedbackMensagem}}</p>
       </div>
     </div>
     
 
-
+    <!-- Resultado -->
     <div class="wrapperBody" *ngIf="!perguntaAtual">
       <h2 class="msgFinal">Fim do Quiz</h2>
       <p class="pontuacaoFinal">Pontuação {{pontuacao}} de {{perguntas.length}}</p>

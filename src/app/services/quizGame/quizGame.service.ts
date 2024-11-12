@@ -12,6 +12,8 @@ export class QuizGameService {
 
   constructor(private http: HttpClient) {}
 
+
+  // Todo provavelmente assync, testar alguma forma de carregamento
   getPerguntas(): Observable<Pergunta[]> {
     return this.http.get<Pergunta[]>(this.docPerguntas);
   }
