@@ -1,0 +1,44 @@
+
+h1 {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.button-row {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+
+}
+
+
+.buttonJogar {
+    text-align: center;
+    justify-content: center;
+    background-color: azure;
+    height: 2.5rem;
+    width:45%;
+}
+
+.wrapperBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(153, 91, 91);
+    width: 100%;
+    flex:1;
+}
+
+.wrapperBody{
+    margin-top: 1%;
+    justify-content: center;
+    height: 90%;
+    width: 70%;
+    outline: auto;
+    outline-color: rgb(59, 12, 41);
+    display: inline-grid;
+    grid-template-columns: auto;
+}
+
