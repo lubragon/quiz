@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home-component',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './home-component.scss'
 })
 export class HomeComponent {
+  constructor(private router: Router) {}
+
+  navigateToQuiz(){
+    this.router.navigate(['/quiz/menu'])
+  }
 
 }
