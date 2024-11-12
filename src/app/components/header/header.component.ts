@@ -11,7 +11,11 @@ export class HeaderComponent {
   constructor(private router: Router) {}
 
     navigateToMain() {
-      this.router.navigate(['/main']); 
+      this.router.navigate(['/home']); 
+    }
+
+    navigateToQuiz(){
+      this.router.navigate(['/quiz/menu'])
     }
 
 }
