@@ -1,18 +1,43 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './components/main/main.component';
-import { QuizComponent } from './components/quiz/quiz.component';
-import { HeaderComponent } from './components/header/header.component';
-
+import { WrapperComponent } from './components/wrapper/wrapper.component';
+import { HomeComponent } from './pages/home/home-component/home-component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/main', pathMatch: 'full'},
-  { path: 'main', component: MainComponent },
-  { path: 'quiz', component: QuizComponent},
-  { path: 'header', component: HeaderComponent}
-  // Rota pro body content?
+  // { path: 'login', component:LoginComponent},
+  // { path: '', redirectTo: '/login', pathMatch: 'full'},
 
+  // { path: 'home', component:HomeComponent, },
+  // { path: '', redirectTo: '/home', pathMatch: 'full'},
+  
+  { path: 'base', redirectTo: '/base/usuario', pathMatch: 'full'},
+
+  {
+    path:'',
+    component: WrapperComponent,
+
+    children:[
+      {
+        path: 'login',
+        loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
+      },
+      {
+        path: 'usuario',
+        loadChildren: () => import('./pages/usuario/usuario.module').then(m => m.UsuarioModule)
+      },
+      {
+        path: 'quiz',
+        loadChildren: () => import('./pages/quiz/quiz.module').then(m => m.QuizGameModule)
+      },
+      {
+        path:'home',
+        loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+      }
+    
+    ]
+  }, 
 
 ];
 
