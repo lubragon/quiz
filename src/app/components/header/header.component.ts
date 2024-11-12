@@ -14,8 +14,6 @@ export class HeaderComponent {
       this.router.navigate(['/home']); 
     }
 
-    navigateToQuiz(){
-      this.router.navigate(['/quiz/menu'])
-    }
+
 
 }
