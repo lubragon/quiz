@@ -1,27 +1,15 @@
-<div id="perguntaBackground">
-
+<div>
     <div *ngIf="perguntaAtual">
-      
       <!-- // Pergunta -->
-      <h2 id="perguntaAtual">{{perguntaAtual.pergunta || ""}}</h2>
-
-
+      <app-quiz-pergunta [pergunta]="perguntaAtual"></app-quiz-pergunta>
       <!-- Respostas -->
-      <div *ngFor="let i of perguntaAtual?.respostas" class="containerRespostas">
-        <div (click)="responder(i)" class="respostaButton" [class.disabled]="isClicked">{{i.texto}}</div>
-      </div>
-
+      <app-quiz-respostas [isClicked]="isClicked" [perguntaAtual]="perguntaAtual" (responder)="responder($event)"></app-quiz-respostas>
       <!-- Feedback -->
-      <div id="resultadoResposta" *ngIf="feedbackMensagem">
-        <p >{{feedbackMensagem}}</p>
-      </div>
+      <app-quiz-feedback [feedbackMensagem]="feedbackMensagem"></app-quiz-feedback>
     </div>
     
-
     <!-- Resultado -->
-    <div class="wrapperBody" *ngIf="!perguntaAtual">
-      <h2 class="msgFinal">Fim do Quiz</h2>
-      <p class="pontuacaoFinal">Pontuação {{pontuacao}} de {{perguntas.length}}</p>
+    <div *ngIf="!perguntaAtual">
+      <app-quiz-resultado [pontuacao]="pontuacao" [perguntas]="perguntas"></app-quiz-resultado>
     </div>
-
 </div>

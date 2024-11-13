@@ -1,0 +1,3 @@
+<div *ngFor="let i of perguntaAtual?.respostas" class="containerRespostas">
+    <div (click)="onResponder(i)" class="respostaButton" [class.disabled]="isClicked">{{i.texto}}</div>
+</div>

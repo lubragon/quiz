@@ -32,7 +32,6 @@ export class QuizGameComponent implements OnInit{
   }
 
   responder(resposta: {texto: string, isCorrect: boolean}){
-
     this.respostaCorreta = resposta.isCorrect;
     this.feedbackMensagem = this.respostaCorreta ? 'Resposta Correta!' : 'Resposta Incorreta!';
 
