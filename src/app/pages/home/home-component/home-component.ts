@@ -14,4 +14,7 @@ export class HomeComponent {
     this.router.navigate(['/quiz/menu'])
   }
 
+  navigateToPlacar(){
+    this.router.navigate(['/placar/solo'])
+  }
 }
