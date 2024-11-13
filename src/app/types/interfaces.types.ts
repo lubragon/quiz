@@ -5,4 +5,10 @@ export interface Pergunta {
     respostas: { texto: string; isCorrect: boolean }[];
   }
 
+
+export interface Usuario {
+  id: number;
+  nome: string;
+  pontuacao: number;
+}
   
