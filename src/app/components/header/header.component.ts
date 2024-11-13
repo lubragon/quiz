@@ -13,6 +13,9 @@ export class HeaderComponent {
     navigateToMain() {
       this.router.navigate(['/home']); 
     }
+    navigateToPerfil() {
+      this.router.navigate(['/perfil']); 
+    }
 
 
 
