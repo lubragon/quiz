@@ -9,6 +9,7 @@ import { QuizRespostasComponent } from './quiz-respostas/quiz-respostas.componen
 import { QuizFeedbackComponent } from './quiz-feedback/quiz-feedback.component';
 import { QuizResultadoComponent } from './quiz-resultado/quiz-resultado.component';
 
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,11 +18,12 @@ import { QuizResultadoComponent } from './quiz-resultado/quiz-resultado.componen
     QuizPerguntaComponent,
     QuizRespostasComponent,
     QuizFeedbackComponent,
-    QuizResultadoComponent
+    QuizResultadoComponent,
   ],
   imports: [
     CommonModule,
-    QuizGameRoutingModule
+    QuizGameRoutingModule,
+    SharedModule
   ]
 })
 export class QuizGameModule { }

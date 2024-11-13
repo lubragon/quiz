@@ -11,23 +11,28 @@ import { Pergunta } from '../../../types/interfaces.types';
 export class QuizGameComponent implements OnInit{
 
   perguntas: Pergunta[] = [];
+  quizFinalizado = false;
   perguntaAtual: Pergunta  | undefined;
-  indiceAtual = 0
+  indiceAtual = 0;
   respostaCorreta: boolean | undefined;
   feedbackMensagem: string | undefined;
-  pontuacao = 0
-  isClicked = false
+  pontuacao = 0;
+
+  isClicked = false;
+  isLoading = false;
 
   constructor(private quizService: QuizGameService) {}
 
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.quizService.getPerguntas().subscribe((data) => {
-      //console.log(data); 
       this.perguntas = data;
       this.perguntaAtual = this.perguntas[this.indiceAtual];
+      this.isLoading = false;
     }, error => {
       console.error('Erro ao carregar perguntas:', error);
+      this.isLoading = false;
     });
   }
 
@@ -43,8 +48,6 @@ export class QuizGameComponent implements OnInit{
       console.log("Errou")
       this.isClicked = true
     }
-
-
 
     setTimeout(() => 
       {
@@ -64,6 +67,7 @@ export class QuizGameComponent implements OnInit{
         this.isClicked = false;
       } else {
         this.perguntaAtual = undefined;
+        this.quizFinalizado = true
       }
     }, 0);
   }

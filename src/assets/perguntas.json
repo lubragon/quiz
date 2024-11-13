@@ -8,6 +8,16 @@
         { "texto": "Roma", "isCorrect": false },
         { "texto": "Berlim", "isCorrect": false }
       ]
+    },
+    {
+      "id": 2,
+      "pergunta": "Onde nasceu o cantor Nadson o Ferinha?",
+      "respostas": [
+        { "texto": "Paris", "isCorrect": false },
+        { "texto": "Londres", "isCorrect": false },
+        { "texto": "Tobias Barreto, município brasileiro do estado de Sergipe.", "isCorrect": true },
+        { "texto": "Berlim", "isCorrect": false }
+      ]
     }
      
 ]
