@@ -24,8 +24,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
       },
       {
-        path: 'usuario',
-        loadChildren: () => import('./pages/usuario/usuario.module').then(m => m.UsuarioModule)
+        path: 'perfil',
+        loadChildren: () => import('./pages/perfil/perfil.module').then(m => m.PerfilModule)
       },
       {
         path: 'quiz',
@@ -34,6 +34,10 @@ const routes: Routes = [
       {
         path:'home',
         loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+      },
+      {
+        path:'placar',
+        loadChildren: () => import('./pages/placar/placar.module').then(m => m.PlacarModule)
       }
     
     ]
