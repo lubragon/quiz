@@ -12,9 +12,6 @@ export class WrapperComponent {
   }
   
 
-  goToQuiz() {
-    this.router.navigate(['/quiz']);
-  }
 
 
 }
