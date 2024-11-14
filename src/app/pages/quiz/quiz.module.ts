@@ -10,6 +10,7 @@ import { QuizFeedbackComponent } from './quiz-feedback/quiz-feedback.component';
 import { QuizResultadoComponent } from './quiz-resultado/quiz-resultado.component';
 
 import { SharedModule } from '../../shared/shared.module';
+import { QuizSeletorComponent } from './quiz-seletor/quiz-seletor.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SharedModule } from '../../shared/shared.module';
     QuizRespostasComponent,
     QuizFeedbackComponent,
     QuizResultadoComponent,
+    QuizSeletorComponent,
   ],
   imports: [
     CommonModule,

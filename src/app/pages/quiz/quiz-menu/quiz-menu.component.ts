@@ -10,9 +10,8 @@ import { Router } from '@angular/router';
 export class QuizMenuComponent {
   constructor(private router: Router) {}
 
-  
-  navigateToQuizGame(){
-    this.router.navigate(['/quiz/game'])
+  navigateToQuizSeletor(){
+    this.router.navigate(['/quiz/selecionar'])
   }
 
 
