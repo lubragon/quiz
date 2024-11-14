@@ -2,7 +2,7 @@
     {
       "id": 1,
       "pergunta": "Qual a capital da França?",
-      "respostas": [
+      "possiveisRespostas": [
         { "texto": "Paris", "isCorrect": true },
         { "texto": "Londres", "isCorrect": false },
         { "texto": "Roma", "isCorrect": false },
@@ -12,7 +12,7 @@
     {
       "id": 2,
       "pergunta": "Onde nasceu o cantor Nadson o Ferinha?",
-      "respostas": [
+      "possiveisRespostas": [
         { "texto": "Paris", "isCorrect": false },
         { "texto": "Londres", "isCorrect": false },
         { "texto": "Tobias Barreto, município brasileiro do estado de Sergipe.", "isCorrect": true },

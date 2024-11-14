@@ -2,8 +2,13 @@
 export interface Pergunta {
     id: number;
     pergunta: string;
-    respostas: { texto: string; isCorrect: boolean }[];
+    possiveisRespostas: PossiveisRespostas[];
   }
+
+export interface PossiveisRespostas{
+    texto: string; 
+    isCorrect: boolean ;
+}
 
 
 export interface Usuario {
