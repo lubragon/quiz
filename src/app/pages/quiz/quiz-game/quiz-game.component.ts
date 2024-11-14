@@ -1,6 +1,6 @@
 import { Component, OnInit, signal, Signal } from '@angular/core';
 import { QuizGameService } from '../../../services/quizGame/quizGame.service';
-import { Pergunta } from '../../../types/interfaces.types';
+import { Pergunta, PossiveisRespostas } from '../../../types/interfaces.types';
 
 @Component({
   selector: 'app-quiz',
@@ -10,14 +10,15 @@ import { Pergunta } from '../../../types/interfaces.types';
 })
 export class QuizGameComponent implements OnInit{
 
-  perguntas: Pergunta[] = [];
-  quizFinalizado = false;
+  arrayPerguntas: Pergunta[] = [];
   perguntaAtual: Pergunta  | undefined;
   indiceAtual = 0;
   respostaCorreta: boolean | undefined;
+  
   feedbackMensagem: string | undefined;
+  
   pontuacao = 0;
-
+  quizFinalizado = false;
   isClicked = false;
   isLoading = false;
 
@@ -27,8 +28,8 @@ export class QuizGameComponent implements OnInit{
   ngOnInit(): void {
     this.isLoading = true;
     this.quizService.getPerguntas().subscribe((data) => {
-      this.perguntas = data;
-      this.perguntaAtual = this.perguntas[this.indiceAtual];
+      this.arrayPerguntas = data;
+      this.perguntaAtual = this.arrayPerguntas[this.indiceAtual];
       this.isLoading = false;
     }, error => {
       console.error('Erro ao carregar perguntas:', error);
@@ -36,7 +37,7 @@ export class QuizGameComponent implements OnInit{
     });
   }
 
-  responder(resposta: {texto: string, isCorrect: boolean}){
+  responder(resposta: PossiveisRespostas){
     this.respostaCorreta = resposta.isCorrect;
     this.feedbackMensagem = this.respostaCorreta ? 'Resposta Correta!' : 'Resposta Incorreta!';
 
@@ -56,13 +57,13 @@ export class QuizGameComponent implements OnInit{
       }, 1500)
 
   }
-
+  
   proximaPergunta(): void 
   {
     setTimeout(() => {
       this.indiceAtual++;
-      if (this.indiceAtual < this.perguntas.length) {
-        this.perguntaAtual = this.perguntas[this.indiceAtual];
+      if (this.indiceAtual < this.arrayPerguntas.length) {
+        this.perguntaAtual = this.arrayPerguntas[this.indiceAtual];
         this.respostaCorreta = undefined;
         this.isClicked = false;
       } else {

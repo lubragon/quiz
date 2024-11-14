@@ -1,4 +1,4 @@
-<div>
+<div class="quizWrapper">
   <app-loader [isLoading]="isLoading"></app-loader>
   <div *ngIf="perguntaAtual">
 
@@ -6,13 +6,13 @@
     <!-- // Pergunta -->
     <app-quiz-pergunta [pergunta]="perguntaAtual"></app-quiz-pergunta>
     <!-- Respostas -->
-    <app-quiz-respostas [isClicked]="isClicked" [perguntaAtual]="perguntaAtual" (responder)="responder($event)"></app-quiz-respostas>
+    <app-quiz-respostas [isClicked]="isClicked" [perguntaAtual]="perguntaAtual" (respostaOutput)="responder($event)"></app-quiz-respostas>
     <!-- Feedback -->
-    <app-quiz-feedback [feedbackMensagem]="feedbackMensagem"></app-quiz-feedback>
+    <!-- <app-quiz-feedback [feedbackMensagem]="feedbackMensagem"></app-quiz-feedback> -->
   </div>
   
   <!-- Resultado -->
   <div *ngIf="quizFinalizado">
-    <app-quiz-resultado [pontuacao]="pontuacao" [perguntas]="perguntas"></app-quiz-resultado>
+    <app-quiz-resultado [pontuacao]="pontuacao" [perguntas]="arrayPerguntas"></app-quiz-resultado>
   </div>
 </div>
