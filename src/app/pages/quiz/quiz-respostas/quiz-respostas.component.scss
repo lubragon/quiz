@@ -1,4 +1,3 @@
-
 .containerRespostas
 {
     display: grid;
@@ -38,4 +37,17 @@
 .respostaButton:hover {
     background-color: #4CB0AB;
     color: #fff;
+  }
+
+  .respostaButton.correta {
+    background-color: #00ff00;
+    color: white;
+    border-color: #00FF00;
+    
+  }
+  
+  .respostaButton.incorreta {
+    background-color: #FF0000F0;
+    color: white;
+    border-color: #FF0000;
   }
