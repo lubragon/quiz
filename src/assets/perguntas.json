@@ -1,6 +1,7 @@
 [
     {
       "id": 1,
+      "modalidade": "geografia",
       "pergunta": "Qual a capital da França?",
       "possiveisRespostas": [
         { "texto": "Paris", "isCorrect": true },
@@ -11,13 +12,103 @@
     },
     {
       "id": 2,
-      "pergunta": "Onde nasceu o cantor Nadson o Ferinha?",
+      "modalidade": "geografia",
+      "pergunta": "Qual o menor e o maior país do mundo?",
       "possiveisRespostas": [
-        { "texto": "Paris", "isCorrect": false },
-        { "texto": "Londres", "isCorrect": false },
-        { "texto": "Tobias Barreto, município brasileiro do estado de Sergipe.", "isCorrect": true },
-        { "texto": "Berlim", "isCorrect": false }
+        { "texto": "Nauru e China", "isCorrect": false },
+        { "texto": "Vaticano e Rússia", "isCorrect": true },
+        { "texto": "Mônaco e Canadá", "isCorrect": false },
+        { "texto": "São Marino e Índia", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "3",
+      "modalidade": "geografia",
+      "pergunta": "Qual o maior ponto do Brasil?",
+      "possiveisRespostas": [
+        {"texto": "Pico Paraná", "isCorrect": false},
+        {"texto": "Pico da Bandeira", "isCorrect": false },
+        {"texto": "Pico da Neblina", "isCorrect": true },
+        {"texto": "Mestre Álvaro", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "4",
+      "modalidade": "geografia",
+      "pergunta": "Em qual local da Ásia o português é língua oficial?",
+      "possiveisRespostas": [
+        {"texto": "Filipinas", "isCorrect": false},
+        {"texto": "Vietnã", "isCorrect": false},
+        {"texto": "Moçambique", "isCorrect": false},
+        {"texto": "Macau", "isCorrect": true}
+      ]
+    },
+    {
+      "id": "5",
+      "modalidade": "geografia",
+      "pergunta": "Qual destes países é transcontinental?",
+      "possiveisRespostas": [
+        {"texto": "Rússia", "isCorrect": true },
+        {"texto": "Brasil", "isCorrect": false },
+        {"texto": "Canadá", "isCorrect": false },
+        {"texto": "China", "isCorrect": false}
+      ]
+    },
+    {
+      "id": "6",
+      "modalidade": "historia",
+      "pergunta": "Quem é o autor do famoso discurso 'Eu tenho um sonho'?",
+      "possiveisRespostas": [
+        {"texto": "Nelson Mandela", "isCorrect": false},
+        {"texto": "Barack Obama", "isCorrect": false },
+        {"texto": "Martin Luther King", "isCorrect": true},
+        {"texto": "Angela Davis", "isCorrect": false}
+      ]
+    },
+    {
+      "id": "7",
+      "modalidade": "historia",
+      "pergunta": "Qual o nome do presidente do Brasil que ficou conhecido como Jango?",
+      "possiveisRespostas": [
+        {"texto": "Jânio Quadros", "isCorrect": false},
+        {"texto": "Jacinto Anjos", "isCorrect": false },
+        {"texto": "João Gomes", "isCorrect": false},
+        {"texto": "João Goulart", "isCorrect": true}
+      ]
+    },
+    {
+      "id": "8",
+      "modalidade": "historia",
+      "pergunta": "Quem pintou 'Guernica'?",
+      "possiveisRespostas": [
+        {"texto": "Paul Cézanne", "isCorrect": false},
+        {"texto": "Pablo Picasso", "isCorrect": true },
+        {"texto": "Tarsila do Amaral", "isCorrect": false},
+        {"texto": "Salvador Dalí", "isCorrect": false}
+      ]
+    },
+    {
+      "id": "9",
+      "modalidade": "historia",
+      "pergunta": "Júpiter e Plutão são os correlatos romanos de quais deuses gregos?",
+      "possiveisRespostas": [
+        {"texto": "Ares e Hermes", "isCorrect": false},
+        {"texto": "Cronos e Apolo", "isCorrect": false },
+        {"texto": "Zeus e Hades", "isCorrect": true},
+        {"texto": "Dionísio e Deméter", "isCorrect": false}
+      ]
+    },
+    {
+      "id": "10",
+      "modalidade": "historia",
+      "pergunta": "Que líder mundial ficou conhecida como 'Dama de Ferro'?",
+      "possiveisRespostas": [
+        {"texto": "Angela Merkel", "isCorrect": false},
+        {"texto": "Margaret Thatcher", "isCorrect": true },
+        {"texto": "Hillary Clinton", "isCorrect": false},
+        {"texto": "Christine Lagarde", "isCorrect": false}
       ]
     }
+    
      
 ]
